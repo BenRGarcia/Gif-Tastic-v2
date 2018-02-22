@@ -39,7 +39,6 @@
           v-for="(badge, id) in badges"
           :key="id"
           :badgeName="badge"
-          :class="badgeClasses"
         />
       </transition-group>
     </div>
