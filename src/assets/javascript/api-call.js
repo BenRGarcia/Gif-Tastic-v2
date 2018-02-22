@@ -39,7 +39,7 @@ export default {
       url: queryURL,
     })
       .done( response => {
-        return response.data;
+        return response;
       });
   }
 }
