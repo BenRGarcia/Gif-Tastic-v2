@@ -59,7 +59,7 @@ export default {
       inputClasses: ["mb-1", "pl-1"],
       // Button
       buttonText: "ADD",
-      buttonClasses: ["btn", "btn-danger"],
+      buttonClasses: ["btn",],
       // Badges
       badgeText: "2) Click a Superhero",
       newBadge: "",
