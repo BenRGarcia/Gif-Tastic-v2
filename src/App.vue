@@ -24,22 +24,39 @@
         
       </div>
     </section>
-    
+
     <!-- Footer | GIPHY Logo -->
     <footer>
-      
+      <footerLogo/>
     </footer>
+
   </div>
 </template>
 
 <script>
 import apiCall from './assets/javascript/api-call'
 import titleHeader from './components/title-header/title-header'
+import footerLogo from './components/logo-footer/logo-footer'
 
 export default {
   name: 'App',
   components: {
-    titleHeader
+    titleHeader,
+    footerLogo
+  },
+  data() {
+    return {
+      gifResults: []
+    }
+  },
+  methods: {
+    searchGifs(keyword) {
+      apiCall.search(keyword).then(
+        function(results) {
+          this.gifResults = results;
+        }.bind(this)
+      );
+    }
   }
 }
 </script>
