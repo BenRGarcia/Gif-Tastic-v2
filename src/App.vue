@@ -5,10 +5,12 @@
 
 <script>
 import apiCall from './assets/javascript/api-call'
+import titleHeader from './components/title-header/title-header'
 
 export default {
   name: 'App',
   components: {
+    titleHeader
   }
 }
 </script>
