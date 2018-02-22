@@ -6,9 +6,9 @@
       @submit.prevent="addBadge"
     >
       <label>
-        <h2>
+        <h4>
           {{ formLabel }}
-        </h2>
+        </h4>
       </label>
       <br>
       <input 
@@ -27,17 +27,20 @@
   
     <!-- Badges -->
     <div>
-      <h2>
+      <h4>
         {{ badgeText }}
-      </h2>
+      </h4>
     </div>
-    <badge 
-      @clickBadge="clickBadge"
-      v-for="(badge, id) in badges"
-      :key="id"
-      :badgeName="badge"
-      :class="badgeClasses"
-    />
+
+    <div class="mb-5">
+      <badge 
+        @clickBadge="clickBadge"
+        v-for="(badge, id) in badges"
+        :key="id"
+        :badgeName="badge"
+        :class="badgeClasses"
+      />
+    </div>
 
   </div>
 </template>
@@ -51,13 +54,13 @@ export default {
       // Input
       formLabel: "1) Add a Superhero",
       placeholder: "ex. Spider-Man ",
-      inputClasses: [],
+      inputClasses: ["mb-1", "pl-1"],
       // Button
       buttonText: "ADD",
-      buttonClasses: [],
+      buttonClasses: ["btn", "btn-danger"],
       // Badges
       badgeText: "2) Click a Superhero",
-      badgeClasses:[],
+      badgeClasses:["badge", "badge-pill", "badge-danger", "ml-1", "mr-1"],
       newBadge: "",
       badges: [
         "Batman",
@@ -71,8 +74,10 @@ export default {
   },
   methods: {
     addBadge() {
-      this.badges.push(this.newBadge);
-      this.newBadge = "";
+      if (this.newBadge !== "") {
+        this.badges.push(this.newBadge);
+        this.newBadge = "";
+      }
     },
     clickBadge(badgeName) {
       this.$emit("clickBadge", badgeName)
@@ -82,5 +87,18 @@ export default {
 </script>
 
 <style scoped>
-
+form {
+  margin-bottom: 2rem;
+}
+label {
+  margin-bottom: 0;
+}
+input {
+  border-radius: 4px;
+  font-size: 1.8rem;
+}
+.btn {
+  font-size: 1.5rem;
+  line-height: 1.0;
+}
 </style>

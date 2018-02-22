@@ -5,7 +5,14 @@
 
 body {
   background: url('../images/marvel-bg.gif');
+  margin-bottom: 28px;
   font-family: 'Bangers';
+  font-size: 1.8rem;
   color: white;
   text-align: center;
+  letter-spacing: 2px;
+}
+
+h4 {
+  margin-bottom: 0;
 }

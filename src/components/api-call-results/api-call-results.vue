@@ -2,9 +2,9 @@
   <div>
 
     <!-- Gif Search Result Instruction -->
-    <h2>
+    <h4>
       {{ gifText }}
-    </h2>
+    </h4>
 
     <!-- Gif Search Results -->
     <result 
@@ -27,7 +27,7 @@ export default {
   ],
   data() {
     return {
-      gifText: "3) Click images to toggle animation"
+      gifText: "3) Click to toggle animation"
     }
   },
   components: {

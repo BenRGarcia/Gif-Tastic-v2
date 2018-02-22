@@ -10,11 +10,13 @@
     >
 
     <!-- Rating (G, PG, PG-13, etc.) -->
-    <p 
-      :class="ratingClasses"
-    >
-      Rating: {{ rating.toUpperCase() }}
-    </p>
+    <div class="card-body">
+      <p 
+        :class="ratingClasses"
+      >
+        Rating: {{ rating.toUpperCase() }}
+      </p>
+    </div>
 
   </div>
 </template>
@@ -30,12 +32,12 @@ export default {
   data() {
     return {
       // Bootstrap Card
-      cardClasses: [],
+      cardClasses: ["card", "m-2"],
       // Image
       isAnimated: false,
-      imageClasses: [],
+      imageClasses: ["card-img-top"],
       // Rating (G, PG, PG-13, etc.)
-      ratingClasses: []
+      ratingClasses: ["card-text"]
     }
   },
   methods: {
@@ -47,5 +49,15 @@ export default {
 </script>
 
 <style scoped>
-  
+.card {
+  max-width: 20rem;
+  display: inline-block;
+}
+.card-body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.card-text {
+  color: #000;
+}
 </style>

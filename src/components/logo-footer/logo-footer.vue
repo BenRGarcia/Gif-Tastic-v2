@@ -26,6 +26,11 @@ export default {
 
 <style scoped>
 img {
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.8);
+  border-radius: 4px;
+  padding: 2px;
+}
+a {
+  font-size: 1rem;
 }
 </style>
