@@ -74,7 +74,7 @@ export default {
       this.badges.push(this.newBadge);
       this.newBadge = "";
     },
-    clickBadge(e) {
+    clickBadge(badgeName) {
       this.$emit("clickBadge", badgeName)
     }
   }
