@@ -4,6 +4,7 @@
 </template>
 
 <script>
+import apiCall from './assets/javascript/api-call'
 
 export default {
   name: 'App',
