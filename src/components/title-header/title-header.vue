@@ -11,7 +11,7 @@
   
     <!-- Page Title -->
     <h1 
-      :class="[titleClasses]"
+      :class="titleClasses"
     >
       {{ title }}
     </h1>
