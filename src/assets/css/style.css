@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Bangers';
+  src: url('../fonts/Bangers/Bangers-Regular.ttf');
+}
+
+body {
+  background: url('../images/marvel-bg.gif');
+  font-family: 'Bangers';
+  color: white;
+  text-align: center;
+}
