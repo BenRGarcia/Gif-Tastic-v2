@@ -56,7 +56,7 @@ export default {
     searchGifs(keyword) {
       apiCall.search(keyword).then(
         function(results) {
-          this.gifResults = results;
+          this.gifResults = results.data;
         }.bind(this)
       );
     }
