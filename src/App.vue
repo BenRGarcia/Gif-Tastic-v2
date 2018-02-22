@@ -1,5 +1,34 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
+
+    <!-- Header | Source Code Link & Page Title -->
+    <header class="row">
+      <div class="col-12">
+        <titleHeader/>
+      </div>
+    </header>
+
+    <!-- Badges | New Badge Input & All Badges List -->
+    <section class="row">
+      <div class="col-12">
+        
+      </div>
+      <div class="col-12">
+        
+      </div>
+    </section>
+
+    <!-- Gifs | Search Results: <img>'s, still/animated -->
+    <section class="row">
+      <div class="col-12">
+        
+      </div>
+    </section>
+    
+    <!-- Footer | GIPHY Logo -->
+    <footer>
+      
+    </footer>
   </div>
 </template>
 
