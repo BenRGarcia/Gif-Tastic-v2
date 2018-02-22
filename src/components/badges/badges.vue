@@ -6,7 +6,7 @@
       @submit.prevent="addBadge"
     >
       <label>
-        <h4>
+        <h4 class="instruction">
           {{ formLabel }}
         </h4>
       </label>
@@ -27,19 +27,21 @@
   
     <!-- Badges -->
     <div>
-      <h4>
+      <h4 class="instruction">
         {{ badgeText }}
       </h4>
     </div>
 
-    <div class="mb-5">
-      <badge 
-        @clickBadge="clickBadge"
-        v-for="(badge, id) in badges"
-        :key="id"
-        :badgeName="badge"
-        :class="badgeClasses"
-      />
+    <div class="mb-5 text-left">
+      <transition-group name="list" tag="span">
+        <badge 
+          @clickBadge="clickBadge"
+          v-for="(badge, id) in badges"
+          :key="id"
+          :badgeName="badge"
+          :class="badgeClasses"
+        />
+      </transition-group>
     </div>
 
   </div>
@@ -60,12 +62,11 @@ export default {
       buttonClasses: ["btn", "btn-danger"],
       // Badges
       badgeText: "2) Click a Superhero",
-      badgeClasses:["badge", "badge-pill", "badge-danger", "ml-1", "mr-1"],
       newBadge: "",
       badges: [
-        "Batman",
-        "Superman",
-        "Wonder Woman"
+        "Wonder Woman","Luke Cage","Black Widow",
+        "She-Hulk","Storm","Black Panther",
+        "Doctor Strange"
       ],
     }
   },
@@ -100,5 +101,19 @@ input {
 .btn {
   font-size: 1.5rem;
   line-height: 1.0;
+  background-color: red;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+/* Animation when new badge added */
+.list-enter-active {
+  transition: all 1s;
+}
+.list-enter {
+  opacity: 0;
+  transform: translateX(30px);
 }
 </style>

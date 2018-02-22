@@ -14,7 +14,7 @@ export default {
   ],
   data() {
     return {
-      badgeClasses: ["badge"]
+      badgeClasses:["badge", "badge-pill", "ml-1", "mr-1"]
     }
   },
   methods: {
@@ -26,5 +26,12 @@ export default {
 </script>
 
 <style scoped>
-
+.badge {
+  background-color: red;
+  border: 1px solid #fff;
+}
+.badge:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
 </style>

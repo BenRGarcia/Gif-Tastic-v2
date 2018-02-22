@@ -14,7 +14,7 @@
 export default {
   data() {
     return {
-      // <a> atrributes
+      // <a> attributes
       href: "https://giphy.com/",
       footerClasses: ["fixed-bottom"],
       // <img> attributes

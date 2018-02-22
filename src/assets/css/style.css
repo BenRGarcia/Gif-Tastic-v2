@@ -13,6 +13,7 @@ body {
   letter-spacing: 2px;
 }
 
-h4 {
+/* Numbered Instruction Headings */
+.instruction {
   margin-bottom: 0;
 }

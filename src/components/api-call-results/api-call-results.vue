@@ -2,18 +2,20 @@
   <div>
 
     <!-- Gif Search Result Instruction -->
-    <h4>
+    <h4 class="instruction">
       {{ gifText }}
     </h4>
 
     <!-- Gif Search Results -->
-    <result 
-      v-for="result in results"
-      :key="result.id"
-      :rating="result.rating" 
-      :stillSrc="result.images.original_still.url" 
-      :animatedSrc="result.images.original.url" 
-    />
+    <transition-group name="list" tag="span">
+      <result 
+        v-for="result in results"
+        :key="result.id"
+        :rating="result.rating" 
+        :stillSrc="result.images.original_still.url" 
+        :animatedSrc="result.images.original.url" 
+      />
+    </transition-group>
     
   </div>
 </template>
@@ -37,5 +39,12 @@ export default {
 </script>
 
 <style scoped>
-  
+/* Animation when new gifs rendered */
+.list-enter-active {
+    transition: all 1s;
+    transition-delay: 0.3s;
+}
+.list-enter {
+  opacity: 0;
+}
 </style>

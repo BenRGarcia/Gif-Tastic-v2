@@ -60,4 +60,7 @@ export default {
 .card-text {
   color: #000;
 }
+img {
+  max-height: 20rem;
+}
 </style>
