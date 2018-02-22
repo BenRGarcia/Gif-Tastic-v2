@@ -1,21 +1,16 @@
-# gif-tastic-v2
+# Gif-Tastic-v2
 
-> A Vue.js project using the GIPHY API
+> A JS framework project created with [Vue.js CLI's webpack template](https://vuejs.org/v2/guide/installation.html#CLI) + [bootstrap v4](https://getbootstrap.com/)  
+> Development setup/process detailed [here](https://github.com/BenRGarcia/Vue-CLI-Notes)
 
-## Build Setup
+Click [here](https://benrgarcia.github.io/Gif-Tastic-v2/) to see the live site
 
-``` bash
-# install dependencies
-npm install
+## Description
 
-# serve with hot reload at localhost:8080
-npm run dev
+* Make a site that uses the [GIPHY API](https://developers.giphy.com/docs/)
 
-# build for production with minification
-npm run build
+* Users can add words to be searched, click generated tags to execute search 
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+* GIPHY API returns gifs based on keyword
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+* Still images rendered, gif's preloaded for quick animation on click
