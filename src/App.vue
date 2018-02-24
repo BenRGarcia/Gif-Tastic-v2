@@ -54,9 +54,9 @@ export default {
   },
   methods: {
     searchGifs(keyword) {
-      apiCall.search(keyword).done(
+      apiCall.search(keyword).then(
         function(results) {
-          this.gifResults = results.data;
+          this.gifResults = results;
         }.bind(this)
       );
     }

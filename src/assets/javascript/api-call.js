@@ -38,8 +38,8 @@ export default {
     return $.ajax({
       url: queryURL,
     })
-      .done( response => {
-        return response;
+      .then( response => {
+        return response.data;
       });
   }
 }
