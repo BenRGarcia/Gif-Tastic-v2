@@ -7,10 +7,8 @@ Click [here](https://benrgarcia.github.io/Gif-Tastic-v2/) to see the live site
 
 ## Description
 
-* Make a site that uses the [GIPHY API](https://developers.giphy.com/docs/)
+1. Input a Superhero name to add a Badge
+2. Click on a Super hero name (will query the [GIPHY API](https://developers.giphy.com/docs/))
+3. Click on an image to animate the Gif, click again to stop animation
 
-* Users can add words to be searched, click generated tags to execute search 
-
-* GIPHY API returns gifs based on keyword
-
-* Still images rendered, gif's preloaded for quick animation on click
+![gif-tastic](https://user-images.githubusercontent.com/26657982/38562764-4d2ed9c6-3ca9-11e8-9b41-55d8c896d13f.png)
